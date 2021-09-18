@@ -7,7 +7,7 @@
 *{
 	margin: 0;
 	padding: 0;
-	font-family: 'Ubuntu',sans-serif;
+	font-family: 'Ubuntu','Segoe UI',sans-serif;
 	box-sizing: border-box;
 	user-select: none;
 }
@@ -103,6 +103,63 @@ footer a{
 	margin-left: 10px;
 	color: #fff;
 }
+.form{
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	max-height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	background: #0003;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+.form.active{
+	display: flex;
+}
+.form form{
+	width: calc(100% - 50px);
+	max-width: 500px;
+	background: #fff;
+	border: 1px solid #aaa;
+	padding: 10px;
+}
+.form form label{
+	display: flex;
+	flex-direction: column;
+	margin: 20px 0;
+	padding: 10px;
+}
+.form form label input{
+	padding: 5px;
+	margin-top: 5px;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #000;
+}
+.form form .btn{
+	display: flex;
+	justify-content: flex-end;
+}
+.form form button{
+	margin-left: 20px;
+	padding: 10px;
+	background: #0000;
+	border: none;
+}
+.form form button:hover{
+	background: #eee;
+}
+
+
+
+@media (max-width: 600px){
+	section .item{
+		padding: 50px 20px;
+	}
+}
 @media (max-width: 300px) {
 	section{
 		width: 100%;
@@ -114,5 +171,9 @@ footer a{
 	section .item h1,
 	section .item #complete_btn{
 		font-size: 18px;
+	}
+	
+	.form form{
+		width: calc(100% - 10px);
 	}
 }
