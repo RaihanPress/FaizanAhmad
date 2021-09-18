@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Site Order - Raihan Press</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<nav>Site Order - Raihan Press</nav>
+	<section>
+		<div class="item">
+			<h1>1. Choose your Domain Extension</h1>
+			<p class="mt5">Ex. <em>yoursite<b>.com</b></em> or <em>yoursite<b>.in</b></em></p>
+			<select id="domain">
+				<option value="com">.COM</option>
+				<option value="in">.IN</option>
+			</select>
+		</div>
+		<div class="item">
+			<h1>2. Server Configuration</h1>
+			<p class="mt5">How much Speed And Storage do you Want?</p>
+			<select id="host">
+				<option value="a">Normal Speed + 30GB Storage</option>
+				<option value="b">Medium Speed + Unlimited Storage</option>
+				<option value="c">High Speed + Unlimited Storage</option>
+			</select>
+		</div>
+		<div class="item">
+			<h1>3. Choose your Site Layout</h1>
+			<p class="mt5">How many pages will be in your site?</p>
+			<select disabled>
+				<option value="">Single Page</option>
+				<option value="">Multi Page</option>
+			</select>
+		</div>
+		<div class="item">
+			<h1>4. Choose your Billing Plan validity</h1>
+			<p class="mt5">You will have to renew after each : </p>
+			<select id="term">
+				<optgroup label="Select Your Billing Cycle">
+					<option value="1">1 Year</option>
+					<option value="2">2 Years</option>
+				</optgroup>
+			</select>
+		</div>
+		<div class="item">
+			<h1>Here is What You will Get :</h1>
+			<ul class="p5" id="benefits">
+				<li class="mt5">Loading</li>
+			</ul>
+		</div>
+		<div class="item">
+			<h1>Time to Calculate Pricing</h1>
+			<p class="mt5">Your Current Plan Costs</p>
+			<h1 class="mt5 price" id="price_first"></h1>
+			<p class="mt5"></p>
+			<p class="mt5" id="price_second">Then <b></b> Per Year.</p>
+			<button id="complete_btn">Complete Your Order</button>
+		</div>
+	</section>
+	<form netlify hidden>
+		<input type="text" name="domain">
+		<input type="text" name="hosting">
+		<input type="number" name="term">
+	</form>
+	<footer class="p5">Raihan Press Barhait <a href="mailto:raihanpressbht@gmail.com">Contact Us</a></footer>
+</body>
+<script src="./app.js"></script>
+</html>
