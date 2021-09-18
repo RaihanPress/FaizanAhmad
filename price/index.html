@@ -17,6 +17,8 @@
 				<option value="com">.COM</option>
 				<option value="in">.IN</option>
 			</select>
+			<p><b style="color: red;" id="d1"></b> for The First Year</p>
+			<p class="mt5">Then <b style="color: red;" id="d2">Rs.</b> ٖPer/Year</p>
 		</div>
 		<div class="item">
 			<h1>2. Server Configuration</h1>
@@ -26,6 +28,8 @@
 				<option value="b">Medium Speed + Unlimited Storage</option>
 				<option value="c">High Speed + Unlimited Storage</option>
 			</select>
+			<p><b style="color: red;" id="h1"></b> for The First Year</p>
+			<p class="mt5">Then <b style="color: red;" id="h2">Rs.</b> ٖPer/Year</p>
 		</div>
 		<div class="item">
 			<h1>3. Choose your Site Layout</h1>
@@ -60,11 +64,26 @@
 			<button id="complete_btn">Complete Your Order</button>
 		</div>
 	</section>
-	<form netlify hidden>
-		<input type="text" name="domain">
-		<input type="text" name="hosting">
-		<input type="number" name="term">
-	</form>
+	<div class="form">
+		<form netlify>
+			<h4>Please Fill Up These Details</h4>
+			<label>
+				<span>Your Name</span>
+				<input type="text" name="name" placeholder="Enter Your Name" required>
+			</label>
+			<label>
+				<span>Your Contact No.</span>
+				<input type="number" name="phone" placeholder="Enter Your Whatsapp No." required>
+			</label>
+			<input type="text" name="domain" hidden>
+			<input type="text" name="hosting" hidden>
+			<input type="number" name="term" hidden>
+			<div class="btn">
+				<button type="reset" id="c">Cancel</button>
+				<button type="submit">Submit</button>
+			</div>
+		</form>
+	</div>
 	<footer class="p5">Raihan Press Barhait <a href="mailto:raihanpressbht@gmail.com">Contact Us</a></footer>
 </body>
 <script src="./app.js"></script>
