@@ -1,0 +1,118 @@
+@font-face {
+	font-family: 'Ubuntu';
+	src: url('./Ubuntu-Regular.ttf');
+}
+.p5{padding: 5px;}
+.mt5{margin-top: 5px;}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Ubuntu',sans-serif;
+	box-sizing: border-box;
+	user-select: none;
+}
+body{
+	min-height: 100vh;
+	background: #ddd;
+}
+nav{
+	font-family: 'Segoe UI',sans-serif;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	text-align: center;
+	padding: 10px;
+	font-size: 20px;
+	background: #fff;
+	border-bottom: 2px solid #ddd;
+	border-bottom: 2px solid #0004;
+	box-shadow: 0 2px 5px #0004;
+	z-index: 1;
+}
+section{
+	min-height: 100vh;
+	margin: 0 auto;
+	width: calc(100% - 20px);
+	max-width: 600px;
+	background: #eee;
+	padding: 10px;
+	padding-top: 70px;
+}
+section .item{
+	display: flex;
+	flex-direction: column;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background: #fff;
+	padding: 10px;
+	margin-bottom: 20px;
+	box-shadow: 0 2px 3px #0005;
+}
+section .item:last-child{
+	margin-bottom: 10px;
+}
+section .item h1{
+	color: #4f4cff;
+	font-size: 20px;
+}
+section .item input,
+section .item select{
+	padding: 5px;
+	margin: 10px 0;
+	outline: none;
+	border: .5px solid #ddd;
+	border-radius: 3px;
+}
+section .item input:focus-visible,
+section .item select:focus-visible,
+section .item #complete_btn:focus-visible{
+	outline: .5px solid #111;
+}
+section .item em{
+	font-weight: 500;
+}
+#benefits{
+	padding-left: 20px;
+}
+section .item h1.price{
+	text-align: center;
+	color: red;
+	border: 2px dotted red;
+	padding: 5px;
+}
+section .item #complete_btn{
+	border: none;
+	outline: none;
+	background: blue;
+	padding: 5px;
+	color: #fff;
+	font-size: 20px;
+	margin-top: 15px;
+	cursor: pointer;
+}
+section .item #complete_btn:hover{
+	background: darkblue;
+}
+footer{
+	background: #222;
+	text-align: center;
+	color: #fff;
+}
+footer a{
+	margin-left: 10px;
+	color: #fff;
+}
+@media (max-width: 300px) {
+	section{
+		width: 100%;
+	}
+	nav{
+		padding: 5px;
+		font-size: 18px;
+	}
+	section .item h1,
+	section .item #complete_btn{
+		font-size: 18px;
+	}
+}
