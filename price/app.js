@@ -1,5 +1,6 @@
 (function(){
 const $ = el=> document.querySelector(el);
+const $$ = el=> document.querySelectorAll(el);
 const plans = {
 	a: ['512 MB RAM',
 		'30 GB Storage',
@@ -34,10 +35,20 @@ function price(){
 	let d = $('#domain').value, 
 	h = $('#host').value, 
 	t = parseInt($('#term').value),
-	price = [3500,4000];
-	console.log(d,h,t,price)
+	price = [3500,4000],hp = '2048';
 	$('#price_first').nextElementSibling.innerHTML = "For the First " + t + " Year"
-	if(t>1) $('#price_first').nextElementSibling.innerHTML += "s"
+	$('#price_first').nextElementSibling.nextElementSibling.innerHTML = "Then <b></b> Per "+t+" Year"
+	$('#d1').innerHTML = `Rs ${d === "com" ? '500' : '500'}`
+	$('#d2').innerHTML = `Rs ${d === "com" ? '1050' : '599'}`
+	if(h === "a")     { hp = "2050"; hp2 = "2130" }
+	else if(h === "b"){	hp = "3950"; hp2 = "4800" }
+	else              { hp = "5030"; hp2 = "7200"}
+	$('#h1').innerHTML = `Rs ${hp}`
+	$('#h2').innerHTML = `Rs ${hp2}`
+	if(t>1) {
+		$('#price_first').nextElementSibling.innerHTML += "s"
+		$('#price_first').nextElementSibling.nextElementSibling.innerHTML += "s"
+	}
 	if(d === "com"){
 		if(h === "a") {
 			t === 1 ? price = [4000,4700] : price = [6400,7900]
@@ -63,9 +74,19 @@ function price(){
 	$('form input[name="term"]').value = t;
 }
 price()
+function cancel(){
+	$('.form').classList.remove('active')
+	$$('.form input').forEach(i=>i.value = "")
+}
 $('#complete_btn').addEventListener('click',function(){
-	$('form').submit()
+	$('.form').classList.toggle('active')
 })
+$('.form').addEventListener('click',function(e){
+	if(e.target.classList == "form active"){
+		cancel()
+	}
+})
+$('.form #c').addEventListener('click',cancel)
 document.querySelectorAll('select').forEach(s=>{
 	s.addEventListener('input',()=>{price()})
 })})()
