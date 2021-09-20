@@ -51,24 +51,25 @@ function price(){
 	}
 	if(d === "com"){
 		if(h === "a") {
-			t === 1 ? price = [4000,4700] : price = [6400,7900]
+			t === 1 ? price = [4000,4700,470] : price = [6400,7900,900]
 		}else if(h === "b"){
-			t === 1 ? price = [6000,7400] : price = [9700,12000]
+			t === 1 ? price = [6000,7400,716] : price = [9700,12000,1504]
 		}else{
-			t === 1 ? price = [7000,9800] : price = [12000,18000]
+			t === 1 ? price = [7000,9800,1010] : price = [12000,18000,1893]
 		}
 	}
 	else if(d === "in"){
 		if(h === "a") {
-			t === 1 ? price = [4000,4250] : price = [5900,7050]
+			t === 1 ? price = [4000,4250,455] : price = [5900,7050,778]
 		}else if(h === "b"){
-			t === 1 ? price = [6000,6950] : price = [8800,11150]
+			t === 1 ? price = [6000,6950,801] : price = [8800,11150,1382]
 		}else{
-			t === 1 ? price = [7000,8750] : price = [11500,17150]
+			t === 1 ? price = [7000,8750,995] : price = [11500,17150,1771]
 		}
 	}
 	$('#price_first').innerHTML = "RS " + price[0] + '/='
 	$('#price_second b').innerHTML = "RS " +price[1] + '/='
+	$('#tax b').innerHTML = "RS " +price[2] + '/='
 	$('form input[name="domain"]').value = d;
 	$('form input[name="hosting"]').value = h;
 	$('form input[name="term"]').value = t;
